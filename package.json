@@ -1,0 +1,20 @@
+{
+  "name": "math-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishanoire/math-api.git"
+  },
+  "author": "Jameela Huq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishanoire/math-api/issues"
+  },
+  "homepage": "https://github.com/nishanoire/math-api#readme"
+}
