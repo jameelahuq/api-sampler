@@ -36,3 +36,7 @@ server.listen(PORT, function() {
   //writing stuff below it means it might fire before this does
   console.log("inside listener");
 });
+
+
+
+//read a file and dispaly i tthrough fs library

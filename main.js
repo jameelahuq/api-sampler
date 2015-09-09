@@ -48,11 +48,13 @@ server.listen(PORT, function() {
 function doAvatars(url, res) {
   url = url.replace(/\/gravatarUrl\//, "");
   var newUrl = 'http://www.gravatar.com/avatar/' + md5(url);
-  res.writeHead(302, {
-    'Location': newUrl
-  });
-  res.write(url);
-  res.end("  IT HAS ENDED\n");
+  var avatarHTML = "<html><img src = '" +  newUrl + "' ></img></html>";
+
+  //res.writeHead(302, {
+  //  'Location': newUrl
+  //});
+  res.write(avatarHTML);
+  res.end(" IT HAS ENDED\n");
 }
 
 function doMaths(url, res) {
