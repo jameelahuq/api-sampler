@@ -1,5 +1,5 @@
 var http = require('http');
-
+var md5 = require('md5');
 var PORT = 8000;
 
 var server = http.createServer(function(req, res) {
@@ -11,7 +11,13 @@ var server = http.createServer(function(req, res) {
 
   if (url.search('math') > -1) {
     doMaths(url, res);
-  } else {
+  }
+
+  if (url.search('gravatarUrl') > -1) {
+    doAvatars(url, res);
+  }
+
+  else {
     switch (url) {
       case '/users':
       {
@@ -38,6 +44,16 @@ server.listen(PORT, function() {
   //writing stuff below it means it might fire before this does
   console.log("inside listener");
 });
+
+function doAvatars(url, res) {
+  url = url.replace(/\/gravatarUrl\//, "");
+  var newUrl = 'http://www.gravatar.com/avatar/' + md5(url);
+  res.writeHead(302, {
+    'Location': newUrl
+  });
+  res.write(url);
+  res.end("  IT HAS ENDED\n");
+}
 
 function doMaths(url, res) {
   var answer = "";
