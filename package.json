@@ -3,9 +3,9 @@
   "port": "3333",
   "version": "1.0.0",
   "description": "really awesome api",
-  "main": "express-notes.js",
+  "main": "main.js",
   "scripts": {
-    "start": "node express-notes.js",
+    "start": "node main.js",
     "test": "mocha test.js"
   },
   "repository": {

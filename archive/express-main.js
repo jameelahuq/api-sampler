@@ -20,6 +20,7 @@ app.use('/', (req, res, next) => {
   next();
 });
 
+app.get('/math/:op', require ('./express-roots.js'));
 app.get('/', require ('./express-roots.js'));
 
 app.get('/', (req, res, next) => {

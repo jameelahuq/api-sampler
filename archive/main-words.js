@@ -1,6 +1,8 @@
 /**
  * Created by HUQ on 9/9/15.
  */
+"use strict";
+
 var http = require('http');
 
 var PORT = 8000;
