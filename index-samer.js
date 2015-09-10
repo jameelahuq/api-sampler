@@ -20,8 +20,9 @@ console.log(4);
 //if you want to read the port and it's in your package.json, then you'll need to read
 //the json file first
 fs.readFile("./package.json", "utf-8", (err,data) => {
-  let json = JSON.parse(data);
-let requestHandlerCb = (req, res) => {
+  let json = JSON.parse(data); //why we gotta do this again?
+  let requestHandlerCb = (req, res) => {
+  res.write(`<html><h2>${json.description}</h2></html>`);
     res.end(data);
     console.log(3);
 
