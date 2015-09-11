@@ -1,0 +1,10 @@
+//Created by HUQ on 9/10/15.
+
+
+extends layout
+
+block content
+    h2#items #{userName} has these items:
+        ul
+            for item in items
+                li #{item}

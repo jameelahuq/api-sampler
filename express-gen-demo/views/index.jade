@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 #{instructions}
+  #loginform
+    form#login(method='post')
+      button(name='login', type='submit', value='new') New Game
+      input.userName(placeholder='register user name' name='newUserName')
+      button(name='login', type='submit', value='saved') Load Game
+      input.userName(placeholder='input user name' name='savedUserName')
+
+      script(src = '/javascripts/user-add.js', type='text/javascript')
